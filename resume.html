@@ -1,0 +1,98 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <h1 class="name">Anisha Garg</h1>
+    </header>
+    <section class="resume-section">
+        <div class="profile-and-resume">
+            <div class="picture">
+                <img src="C:\Users\anish\Downloads\DALL·E 2024-09-29 10.35.58 - A realistic-looking resume icon with a modern twist. The primary color should remain a vibrant blue with a gradient effect for depth. The layout inclu.webp" alt="Profile Picture">  
+            </div>
+            <div class="resume-content">
+                <h2>My Resume</h2>
+                <form id="uploadForm" action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" required>
+                    <button type="submit">Upload</button>
+                </form>
+                <div id="uploadMessage"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(document.getElementById('uploadForm'));
+
+            const response = await fetch('http://localhost:3000/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const message = document.getElementById('uploadMessage');
+            if (response.ok) {
+                message.textContent = 'File uploaded successfully!';
+            } else {
+                message.textContent = 'File upload failed. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <h1 class="name">Anisha Garg</h1>
+        <!-- Navigation Icon -->
+        <div class="nav-icon-circle" id="navIcon">
+            <div class="dots">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+        </div>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="resume-section">
+        <div class="picture">
+            <img src="C:\Users\anish\Downloads\DALL·E 2024-09-29 10.35.58 - A realistic-looking resume icon with a modern twist. The primary color should remain a vibrant blue with a gradient effect for depth. The layout inclu.webp" alt="Profile Picture">  
+        </div>
+        <div class="upload-box">
+            <h2>My Resume</h2>
+            <!-- Add your resume link below -->
+            <a href="C:\Users\anish\Desktop\Resume\Anisha_Garg.pdf" target="_blank" class="resume-link">View My Resume</a>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for Navigation Toggle
+        const navIcon = document.getElementById('navIcon');
+        const navMenu = document.getElementById('navMenu');
+
+        navIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

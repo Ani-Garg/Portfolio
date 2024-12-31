@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1 class="name">Anisha Garg</h1>
+        <!-- <div class="nav-icon-circle" id="navIcon">
+            <div class="dots">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+        </div> -->
+        <div id="navigationMenu" class="hidden">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="about-section">
+        <div class="profile-picture">
+            <img src="C:\Users\anish\Desktop\Anisha\AG.jpg" alt="Profile Picture">
+        </div>
+        <div class="about-text">
+            <h3>A Bit About Me</h3>
+            <p>I'm in the final stages of my Computer Science degree, focusing on Software Development. Outside of my studies, I enjoy solving complex puzzles.</P>
+                <p>I also have a passion for simplifying complex concepts and sharing them with others.</p>
+                <p>"Driven by curiosity, powered by code"</p>
+        </div>
+    </div>
+    
+    
+    <!-- <section class="links">
+        <a href="/resume" class="link-btn" target="_blank">Resume</a>
+        <a href="/research" class="link-btn" target="_blank">Research</a>
+        <a href="/contact" class="link-btn" target="_blank">Outreach</a>
+        <a href="/personal" class="link-btn" target="_blank">Personal</a>
+    </section> -->
+    <footer class="footer">
+        &copy; 2024 Portfolio. All rights reserved.
+    </footer>
+    
+    <script src="script.js"></script>
+    <server src="server.js"></server>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+    // Check if the popup should be displayed
+    const lastVisitTime = localStorage.getItem("lastVisitTime");
+    const currentTime = new Date().getTime();
+    
+    // 10 minutes in milliseconds
+    const tenMinutes = 1 * 60 * 1000;
+
+    // if (!lastVisitTime || currentTime - lastVisitTime > tenMinutes) {
+    //     // Display the popup
+    //     displayBoomPopup();
+    //     // Store the current time in localStorage
+    //     localStorage.setItem("lastVisitTime", currentTime);
+    // }
+});
+
+function displayBoomPopup() {
+    // Create the popup element
+    const popup = document.createElement("div");
+    popup.innerText = "Welcome!!";
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.padding = "20px";
+    popup.style.backgroundColor = "yellow";
+    popup.style.border = "2px solid black";
+    popup.style.borderRadius = "10px";
+    popup.style.fontSize = "24px";
+    popup.style.zIndex = "9999";
+    popup.style.transition = "transform 0.5s ease-in-out";
+
+    document.body.appendChild(popup);
+
+    // Boom bomb effect
+    setTimeout(() => {
+        popup.style.transform = "translate(-50%, -50%) scale(1.2)";
+    }, 100);
+
+    // Remove the popup after 3 seconds
+    setTimeout(() => {
+        popup.remove();
+    }, 3000);
+}
+
+    </script>
+  
+    
+</body>
+</html>
